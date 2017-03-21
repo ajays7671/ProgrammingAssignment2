@@ -1,5 +1,5 @@
 
-## The first function makeCacheMatrix is a special "Matrix" #### function
+## The first function makeCacheMatrix is a special "Matrix" # function
 ## It consists list to set and get the value of matrix
 ## And also set inverse of matrix and get inverse of matrix
 
@@ -10,7 +10,11 @@ makeCacheMatrix <- function(x = matrix()) {
                 t <- NULL
         }
         get <- function() x
+        getinverse <- solve(x)  
+        setinverse <- function() t
         list(set = set, get = get,
+             getinverse = getinverse,
+             setinverse = setinverse)        
 }
 
 ## To test the above function we are using a square matrix. ## Just uncomment below 2 lines 
